@@ -1,0 +1,40 @@
+﻿@using FreelancerUI.Models
+@using Microsoft.AspNetCore.Components.Forms
+
+@inject NavigationManager navigationManager;
+
+<EditForm Model="userViewModel" OnValidSubmit="SaveUser">
+	<DataAnnotationsValidator></DataAnnotationsValidator>
+
+	<InputText class="form-control" placeholder="User Name" @bind-Value="userViewModel.UserName"></InputText><br />
+	<ValidationMessage For="(()=>userViewModel.UserName)"></ValidationMessage><br />
+
+	<InputText class="form-control" placeholder="Email" @bind-Value="userViewModel.Email"></InputText><br />
+	<ValidationMessage For="(()=>userViewModel.Email)"></ValidationMessage><br />
+	
+	<InputText class="form-control" placeholder="PhoneNumber" @bind-Value="userViewModel.PhoneNumber"></InputText><br />
+	<ValidationMessage For="(()=>userViewModel.PhoneNumber)"></ValidationMessage><br />
+
+	<InputText class="form-control" placeholder="Skill Set" @bind-Value="userViewModel.SkilSets"></InputText><br />
+	<ValidationMessage For="(()=>userViewModel.SkilSets)"></ValidationMessage><br />
+
+	<InputText class="form-control" placeholder="Hobby" @bind-Value="userViewModel.Hobby"></InputText><br />
+	<ValidationMessage For="(()=>userViewModel.Hobby)"></ValidationMessage><br />
+
+	<button class="btn btn-primary" type="submit">Save</button>
+</EditForm>
+
+
+
+@code {
+	[Parameter]
+	public UserViewModel userViewModel { get; set; } 
+
+	[Parameter]
+	public EventCallback<UserViewModel> SaveUserCallback { get; set; }
+
+	private async Task SaveUser()
+	{
+		await SaveUserCallback.InvokeAsync(userViewModel);
+	}
+}

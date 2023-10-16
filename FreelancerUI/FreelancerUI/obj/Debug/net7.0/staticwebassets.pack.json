@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\6 Malaysia\\Assesment\\FreelancerUI\\FreelancerUI\\FreelancerUI\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.FreelancerUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.FreelancerUI.props",
+      "PackagePath": "build\\FreelancerUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.FreelancerUI.props",
+      "PackagePath": "buildMultiTargeting\\FreelancerUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.FreelancerUI.props",
+      "PackagePath": "buildTransitive\\FreelancerUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

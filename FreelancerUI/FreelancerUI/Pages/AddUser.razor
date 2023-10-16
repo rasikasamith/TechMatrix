@@ -1,0 +1,38 @@
+﻿@page "/adduser"
+@using FreelancerUI.Models
+@using System.Text.Json;
+@using System.Text;
+@using FreelancerUI.Pages.CommonComponents;
+
+@inject NavigationManager navigationManager
+<h3>Add New User</h3>
+<AddEditUser userViewModel=emptyUserViewModel SaveUserCallback=SaveUser></AddEditUser>
+
+@code {
+	UserViewModel emptyUserViewModel = new UserViewModel();
+    
+
+    public async Task SaveUser(UserViewModel userViewModel)
+    {
+        string API_URL = "https://localhost:7034/api/User/CreateUser";
+
+        // Serialize userViewModel to JSON
+        var json = JsonSerializer.Serialize(userViewModel);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        using var httpClient = new HttpClient();
+
+        // Send a POST request to the API with the serialized userViewModel
+        var response = await httpClient.PostAsync(API_URL, content);
+
+        if (response.IsSuccessStatusCode)
+        {           
+            navigationManager.NavigateTo("./");
+        }
+        else
+        {           
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"User creation failed: {responseContent}");
+        }
+    }
+
+}

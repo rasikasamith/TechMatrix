@@ -1,0 +1,53 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FreelancerUI
+build_property.RootNamespace = FreelancerUI
+build_property.ProjectDir = D:\6 Malaysia\Assesment\FreelancerUI\FreelancerUI\FreelancerUI\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\6 Malaysia\Assesment\FreelancerUI\FreelancerUI\FreelancerUI
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/6 Malaysia/Assesment/FreelancerUI/FreelancerUI/FreelancerUI/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/6 Malaysia/Assesment/FreelancerUI/FreelancerUI/FreelancerUI/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/6 Malaysia/Assesment/FreelancerUI/FreelancerUI/FreelancerUI/Pages/AddUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/6 Malaysia/Assesment/FreelancerUI/FreelancerUI/FreelancerUI/Pages/CommonComponents/AddEditUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uQ29tcG9uZW50c1xBZGRFZGl0VXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/6 Malaysia/Assesment/FreelancerUI/FreelancerUI/FreelancerUI/Pages/CommonComponents/UserDetailsRow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uQ29tcG9uZW50c1xVc2VyRGV0YWlsc1Jvdy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/6 Malaysia/Assesment/FreelancerUI/FreelancerUI/FreelancerUI/Pages/EditUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFVzZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/6 Malaysia/Assesment/FreelancerUI/FreelancerUI/FreelancerUI/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/6 Malaysia/Assesment/FreelancerUI/FreelancerUI/FreelancerUI/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/6 Malaysia/Assesment/FreelancerUI/FreelancerUI/FreelancerUI/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,67 @@
+﻿@page "/edituser/{UId}"
+@using FreelancerUI.Models
+@using System.Text.Json;
+@using System.Text;
+@using FreelancerUI.Pages.CommonComponents;
+
+@inject NavigationManager navigationManager
+<h3>Edit User</h3>
+<AddEditUser userViewModel=userViewModel SaveUserCallback=UpdateUser></AddEditUser>
+
+@code {
+    [Parameter]
+    public string UId { get; set; }
+
+    UserViewModel userViewModel = new UserViewModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        base.OnInitialized();        
+
+        HttpClient httpClient = new HttpClient();
+        HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7034/api/User/GetUserByUId?uId={UId}");
+        httpClient.Dispose();
+
+        using var responseStream = await response.Content.ReadAsStreamAsync();
+        if (response.IsSuccessStatusCode)
+        {
+            userViewModel = await JsonSerializer.DeserializeAsync<UserViewModel>(responseStream);            
+        }      
+        else
+        {
+            // Handle the case where the user with the given UId was not found or any other error.
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"User retrieval failed: {responseContent}");
+        }
+    }      
+
+    public async Task UpdateUser(UserViewModel userViewModel)
+    {
+        string API_URL = "https://localhost:7034/api/User/UpdateUser";
+
+        // Serialize userViewModel to JSON
+        var json = JsonSerializer.Serialize(userViewModel);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+        using var httpClient = new HttpClient();
+
+        // Send a POST request to the API with the serialized userViewModel
+        var response = await httpClient.PutAsync(API_URL, content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            // User created successfully, navigate to the desired page
+            navigationManager.NavigateTo("./");
+
+        }
+        else
+        {
+            // Handle the case when user creation fails
+            // You can retrieve more information from the response if needed
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"User creation failed: {responseContent}");
+        }
+    }
+
+
+}

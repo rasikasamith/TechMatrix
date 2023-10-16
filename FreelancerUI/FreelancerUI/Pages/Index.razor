@@ -1,0 +1,77 @@
+﻿@page "/"
+@using FreelancerUI.Models
+@using System.Text.Json
+@using FreelancerUI.Pages.CommonComponents
+@inherits LayoutComponentBase
+@inject NavigationManager navigationManager;
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<h1>All Users</h1>
+
+@if (users == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Skil Sets</th>
+                <th>Hobby</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in users)
+            {
+                <tr>                 
+                    <UserDetailsRow userViewModel="@item" DeleteUserCallback="DeleteUser" UpdateUserCallback="UpdateUser"></UserDetailsRow>
+                </tr>
+            }
+        </tbody>
+    </table>   
+}
+<br />
+<a href="adduser">Add New User</a>
+
+@code{
+    string API_URL = "https://localhost:7034/";
+    private IEnumerable<UserViewModel> users = Array.Empty<UserViewModel>();
+
+    private async Task refreshList()
+    {
+        HttpClient httpClient = new HttpClient();
+        HttpResponseMessage response = await httpClient.GetAsync(API_URL + "api/User/GetUsers");
+        httpClient.Dispose();
+        using var responseStream = await response.Content.ReadAsStreamAsync();
+        users = await JsonSerializer.DeserializeAsync<IEnumerable<UserViewModel>>(responseStream);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await this.refreshList();
+    }
+    
+    public async Task DeleteUser(int uId)
+    {    
+        HttpClient httpClient = new HttpClient();
+        HttpResponseMessage response = await httpClient.DeleteAsync($"https://localhost:7034/api/User/DeleteUser?UId={uId.ToString()}");
+        httpClient.Dispose();
+        using var responseStream = await response.Content.ReadAsStreamAsync();
+        string res = response.Content.ReadAsStringAsync().Result;
+       
+        await this.refreshList();
+    }
+
+    public async Task UpdateUser(UserViewModel userViewModel)
+    {
+        navigationManager.NavigateTo($"./edituser/{userViewModel.UId.ToString()}");  
+    }
+}
+
