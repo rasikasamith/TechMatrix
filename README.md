@@ -1,50 +1,41 @@
 # TechMatrix Assessment
- 
-This project is handling  infomation about freelancers.
-It contain two part 
+
+TechMatrix Assessment is a project designed to manage freelancer information. It consists of two main components:
+
+# Components
+
 1) Web API 
-   It has these end points.
-   -GetUsers
-   -CreateUser
-   -DeleteUser
-   -UpdateUser
-2) User interface to consume web API
-   Above endpoints are accessed by the UI. It demostrate create,read,update and delete operations.
+    -GetUsers: Retrieve a list of freelancers.
+    -CreateUser: Add a new freelancer.
+    -DeleteUser: Remove a freelancer from the database.
+    -UpdateUser: Modify freelancer details.
+2) User Interface (UI):
+    -Accesses the above API endpoints.
+    -Demonstrates CRUD (Create, Read, Update, Delete) operations.
 
-## Table of Contents
+## Technologies
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Features](#features)
-
-
-## Installation
-
-API part is developed using .NET core  web API 
-UI part is developed using Blazor server
-Database is MS SQL
+-API: Developed with .NET Core Web API and hosted on Azure App Services.
+-UI: Built using Blazor Server and hosted on Azure App Services.
+-Database: Powered by Microsoft SQL Server and hosted in Azure.
 
 ## Usage
 
-Web API - https://techmetrixapi.azurewebsites.net/api/user/getusers
+UI: Access the UI at [TechMatrix UI](https://techmatrixui.azurewebsites.net/).
+Web API-Interact with the API at [TechMatrix Web API](https://techmetrixapi.azurewebsites.net/api/user/getusers).
 
-Database - freelancerapidbserver.database.windows.net
-Login- saadmin
-Password-Kalkuda@123 
-
-UI - 
-
-## Configuration
-
-Explain how to configure your project.
+Database: The database is hosted in Azure at freelancerapidbserver.database.windows.net. 
+Use the following credentials:
+Login: saadmin
+Password: Kalkuda@123
 
 ## Features
 
-Get all freelancer
-Add new freelancer
-Delete freelancer
-Edit freelancers details
+-Retrieve a list of all freelancers.
+-Add new freelancers to the database.
+-Delete existing freelancers.
+-Edit freelancer details.
+
 
 
 
