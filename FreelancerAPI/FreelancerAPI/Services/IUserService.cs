@@ -3,11 +3,11 @@
 namespace FreelancerAPI.Services
 {
 	public interface IUserService
-	{
-		public List<User> GetUsers();
-		public void CreateUser(User user);
-		public User GetUserByUId(int uId);
-		public void DeleteUser(User user);
-		public void Updateuser(User user);
-	}
+	{	
+        public Task<List<User>> GetUsers(); 
+        public Task CreateUser(User user);
+        public Task<User> GetUserByUId(int uId);
+        public Task DeleteUser(User user);
+        public Task Updateuser(User user);
+    }
 }
