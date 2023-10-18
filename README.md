@@ -1,9 +1,10 @@
 # TechMatrix Assessment
 
-TechMatrix Assessment is a project designed to manage freelancer information. It consists of two main components:
+TechMatrix Assessment is a project designed to manage freelancer information. 
 
 # Components
 
+It consists of two main components:
 1) Web API 
     -GetUsers: Retrieve a list of freelancers.
     -CreateUser: Add a new freelancer.
@@ -15,19 +16,19 @@ TechMatrix Assessment is a project designed to manage freelancer information. It
 
 ## Technologies
 
--API: Developed with .NET Core Web API and hosted on Azure App Services.
+-API: Developed using .NET Core Web API and hosted on Azure App Services. Utilizes dependency injection and follows the Entity Framework Code-First approach.
 -UI: Built using Blazor Server and hosted on Azure App Services.
 -Database: Powered by Microsoft SQL Server and hosted in Azure.
 
+## Architecture:
+
+This project follows a Service-Based Architecture where a service layer is used to interact with the database. Services provide a structured and modular way to handle data operations, enhancing the maintainability and scalability of the application.
+
 ## Usage
 
-UI: Access the UI at [TechMatrix UI](https://techmatrixui.azurewebsites.net/).
-Web API-Interact with the API at [TechMatrix Web API](https://techmetrixapi.azurewebsites.net/api/user/getusers).
-
-Database: The database is hosted in Azure at freelancerapidbserver.database.windows.net. 
-Use the following credentials:
-Login: saadmin
-Password: Kalkuda@123
+-UI: Access the UI at [TechMatrix UI](https://techmatrixui.azurewebsites.net/).
+-Web API:Interact with the API at [TechMatrix Web API](https://techmetrixapi.azurewebsites.net/api/user/getusers).
+-Database: The database is hosted in Azure at freelancerapidbserver.database.windows.net.
 
 ## Features
 
