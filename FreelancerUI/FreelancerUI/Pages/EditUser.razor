@@ -5,7 +5,9 @@
 @using FreelancerUI.Pages.CommonComponents;
 
 @inject NavigationManager navigationManager
-<h3>Edit User</h3>
+
+<h3 class="h3">Edit Member</h3>
+
 <AddEditUser userViewModel=userViewModel SaveUserCallback=UpdateUser></AddEditUser>
 
 @code {
@@ -19,7 +21,9 @@
         base.OnInitialized();        
 
         HttpClient httpClient = new HttpClient();
-        HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7034/api/User/GetUserByUId?uId={UId}");
+        //HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7034/api/User/GetUserByUId?uId={UId}");
+        HttpResponseMessage response = await httpClient.GetAsync($"https://techmetrixapi.azurewebsites.net/api/User/GetUserByUId?uId={UId}");
+    
         httpClient.Dispose();
 
         using var responseStream = await response.Content.ReadAsStreamAsync();
@@ -37,7 +41,8 @@
 
     public async Task UpdateUser(UserViewModel userViewModel)
     {
-        string API_URL = "https://localhost:7034/api/User/UpdateUser";
+        //string API_URL = "https://localhost:7034/api/User/UpdateUser";
+        string API_URL = "https://techmetrixapi.azurewebsites.net/api/User/UpdateUser";
 
         // Serialize userViewModel to JSON
         var json = JsonSerializer.Serialize(userViewModel);

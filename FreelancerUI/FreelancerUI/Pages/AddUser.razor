@@ -5,7 +5,9 @@
 @using FreelancerUI.Pages.CommonComponents;
 
 @inject NavigationManager navigationManager
-<h3>Add New User</h3>
+
+<h3 class="h3">Add New Member</h3>
+
 <AddEditUser userViewModel=emptyUserViewModel SaveUserCallback=SaveUser></AddEditUser>
 
 @code {
@@ -14,7 +16,8 @@
 
     public async Task SaveUser(UserViewModel userViewModel)
     {
-        string API_URL = "https://localhost:7034/api/User/CreateUser";
+        //string API_URL = "https://localhost:7034/api/User/CreateUser";
+        string API_URL = "https://techmetrixapi.azurewebsites.net/api/User/CreateUser";
 
         // Serialize userViewModel to JSON
         var json = JsonSerializer.Serialize(userViewModel);

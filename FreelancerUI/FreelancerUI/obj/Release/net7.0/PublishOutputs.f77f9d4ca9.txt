@@ -1,0 +1,7 @@
+D:\6 Malaysia\Assesment\FreelancerUI\FreelancerUI\obj\Release\net7.0\PubTmp\Out\FreelancerUI.exe
+D:\6 Malaysia\Assesment\FreelancerUI\FreelancerUI\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+D:\6 Malaysia\Assesment\FreelancerUI\FreelancerUI\obj\Release\net7.0\PubTmp\Out\appsettings.json
+D:\6 Malaysia\Assesment\FreelancerUI\FreelancerUI\obj\Release\net7.0\PubTmp\Out\FreelancerUI.dll
+D:\6 Malaysia\Assesment\FreelancerUI\FreelancerUI\obj\Release\net7.0\PubTmp\Out\FreelancerUI.deps.json
+D:\6 Malaysia\Assesment\FreelancerUI\FreelancerUI\obj\Release\net7.0\PubTmp\Out\FreelancerUI.runtimeconfig.json
+D:\6 Malaysia\Assesment\FreelancerUI\FreelancerUI\obj\Release\net7.0\PubTmp\Out\FreelancerUI.pdb

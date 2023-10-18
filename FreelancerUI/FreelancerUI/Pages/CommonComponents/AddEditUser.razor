@@ -3,27 +3,58 @@
 
 @inject NavigationManager navigationManager;
 
-<EditForm Model="userViewModel" OnValidSubmit="SaveUser">
-	<DataAnnotationsValidator></DataAnnotationsValidator>
 
-	<InputText class="form-control" placeholder="User Name" @bind-Value="userViewModel.UserName"></InputText><br />
-	<ValidationMessage For="(()=>userViewModel.UserName)"></ValidationMessage><br />
+<style>
+    .table-no-border td {
+        border: none;
+    }
+</style>
 
-	<InputText class="form-control" placeholder="Email" @bind-Value="userViewModel.Email"></InputText><br />
-	<ValidationMessage For="(()=>userViewModel.Email)"></ValidationMessage><br />
-	
-	<InputText class="form-control" placeholder="PhoneNumber" @bind-Value="userViewModel.PhoneNumber"></InputText><br />
-	<ValidationMessage For="(()=>userViewModel.PhoneNumber)"></ValidationMessage><br />
+<EditForm Model="userViewModel" OnValidSubmit="SaveUser" class="col-md-6">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <table class="table table-no-border">
+        <tbody>
+            <tr>
+                <td>User Name</td>
+                <td>
+                    <InputText class="form-control" @bind-Value="userViewModel.UserName" />
+                    <ValidationMessage For="(() => userViewModel.UserName)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <InputText class="form-control" @bind-Value="userViewModel.Email" />
+                    <ValidationMessage For="(() => userViewModel.Email)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>
+                    <InputText class="form-control" @bind-Value="userViewModel.PhoneNumber" />
+                    <ValidationMessage For="(() => userViewModel.PhoneNumber)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Skill Set</td>
+                <td>
+                    <InputText class="form-control" @bind-Value="userViewModel.SkilSets" />
+                    <ValidationMessage For="(() => userViewModel.SkilSets)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Hobby</td>
+                <td>
+                    <InputText class="form-control" @bind-Value="userViewModel.Hobby" />
+                    <ValidationMessage For="(() => userViewModel.Hobby)" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-	<InputText class="form-control" placeholder="Skill Set" @bind-Value="userViewModel.SkilSets"></InputText><br />
-	<ValidationMessage For="(()=>userViewModel.SkilSets)"></ValidationMessage><br />
-
-	<InputText class="form-control" placeholder="Hobby" @bind-Value="userViewModel.Hobby"></InputText><br />
-	<ValidationMessage For="(()=>userViewModel.Hobby)"></ValidationMessage><br />
-
-	<button class="btn btn-primary" type="submit">Save</button>
+    <button type="submit" class="btn btn-warning">Save</button>
+    <a href="/" class="btn btn btn-primary">Back</a>    
 </EditForm>
-
 
 
 @code {

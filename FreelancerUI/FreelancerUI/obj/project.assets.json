@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\6 Malaysia\\Assesment\\FreelancerUI\\FreelancerUI\\FreelancerUI\\FreelancerUI.csproj",
+      "projectUniqueName": "D:\\6 Malaysia\\Assesment\\FreelancerUI\\FreelancerUI\\FreelancerUI.csproj",
       "projectName": "FreelancerUI",
-      "projectPath": "D:\\6 Malaysia\\Assesment\\FreelancerUI\\FreelancerUI\\FreelancerUI\\FreelancerUI.csproj",
+      "projectPath": "D:\\6 Malaysia\\Assesment\\FreelancerUI\\FreelancerUI\\FreelancerUI.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\6 Malaysia\\Assesment\\FreelancerUI\\FreelancerUI\\FreelancerUI\\obj\\",
+      "outputPath": "D:\\6 Malaysia\\Assesment\\FreelancerUI\\FreelancerUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
