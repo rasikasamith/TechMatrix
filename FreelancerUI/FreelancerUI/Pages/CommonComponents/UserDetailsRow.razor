@@ -5,8 +5,9 @@
 <td>@userViewModel.PhoneNumber</td>
 <td>@userViewModel.SkilSets</td>
 <td>@userViewModel.Hobby</td>
-<td><button @onclick="UpdateUser">Updte</button></td>
-<td><button @onclick="DeleteUser">Delete</button></td>
+<td><button @onclick="UpdateUser" class="btn btn-primary">Update</button></td>
+<td><button @onclick="DeleteUser" class="btn btn-danger">Delete</button></td>
+
 
 
 @code {
@@ -26,6 +27,6 @@
 
     private void UpdateUser()
     {
-        UpdateUserCallback.InvokeAsync(userViewModel);
+        UpdateUserCallback.InvokeAsync(userViewModel);     
     }
 }
