@@ -1,6 +1,6 @@
-# TechMatrix Assessment
+# Blazor and Asp.NET Web API CRUD
 
-TechMatrix Assessment is a project designed to manage freelancer information. 
+This is a project that demonstrate CRUD operations with Blazor and ASP.NET Web API.  It is to manage freelancer information. 
 
 # Components
 
